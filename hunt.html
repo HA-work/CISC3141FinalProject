@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hunt</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="text/javascript" src="hunt.js"></script>
+
+    <script type="text/javascript" src="colorChangeScript.js"></script>
+  </head>
+  <body id="hunt">
+    <div id="navbar" class="navbar">
+      <a href="index.html">Home</a>
+
+      <!-- List items populate ordered an unordered lists-->
+
+      <a href="about.html">About</a>
+
+      <a href="crimeStats.html">Crime Stats</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="closedCases.html">Closed Cases</a>
+
+      <a href="openCases.html">Open Cases</a>
+
+      <a href="recipes.html">Recipes</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="logIn.html">Log In</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="clues.html">Clues</a>
+
+      <a href="hunt.html">Hunt</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Change Color
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <button type="button" onclick="colorRed()">Red</button><br /><br />
+          <button type="button" onclick="colorMagenta()">Magenta</button
+          ><br /><br />
+          <button type="button" onclick="colorBlue()">Blue</button><br /><br />
+          <button type="button" onclick="colorBlack()">Black</button>
+        </div>
+      </div>
+    </div>
+    <h1>Clue Hunt</h1>
+    <p>Guesses Left: <span id="guessesLeft">5</span></p>
+    <div id="gameBoard"></div>
+    <form id="movementControls" onsubmit="return false;">
+      <p>Move</p>
+      <table>
+        <tr>
+          <td rowspan="3">
+            <input
+              type="image"
+              src="images/left.png"
+              width="44"
+              height="44"
+              title="left"
+              value="&lt;-"
+              onclick="move('left')"
+            />
+          </td>
+          <td>
+            <input
+              type="image"
+              src="images/up.png"
+              width="44"
+              height="44"
+              title="up"
+              value="^"
+              onclick="move('up')"
+            />
+          </td>
+          <td rowspan="3">
+            <input
+              type="image"
+              src="images/right.png"
+              width="44"
+              height="44"
+              value="-&gt;"
+              onclick="move('right')"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="image"
+              src="images/down.png"
+              width="44"
+              height="44"
+              value="v"
+              onclick="move('down')"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <form id="guessControls" onsubmit="return false;">
+      <p>Guess</p>
+      <table>
+        <tr>
+          <td rowspan="3">
+            <input
+              type="image"
+              src="images/gleft.png"
+              width="44"
+              height="44"
+              title="left"
+              value="&lt;-"
+              onclick="guess('left')"
+            />
+          </td>
+          <td>
+            <input
+              type="image"
+              src="images/gup.png"
+              width="44"
+              height="44"
+              title="up"
+              value="^"
+              onclick="guess('up')"
+            />
+          </td>
+          <td rowspan="3">
+            <input
+              type="image"
+              src="images/gright.png"
+              width="44"
+              height="44"
+              title="right"
+              value="-&gt;"
+              onclick="guess('right')"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="image"
+              src="images/gdown.png"
+              width="44"
+              height="44"
+              title="down"
+              value="v"
+              onclick="guess('down')"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <h2>About Clue Hunt</h2>
+    <p>
+      This is a game for you to test your powers of deduction.
+      <br />
+      Use your wits to explore a dangerous warehouse and find which room the
+      criminal is hiding in.
+      <br />
+      Navigate using your powers of perception to avoid hazardous rooms.
+      <br />
+    </p>
+    <h3>Rules</h3>
+    <ol>
+      <li>
+        There are 3 hazards:
+        <ol>
+          <li>
+            An alarm. Tripping the alarm will cause the criminal to escape and
+            you to lose. (you will hear ticking when adjacent to the room with
+            the alarm).
+          </li>
+          <li>
+            Disorientating gas. Gas that will move you to a random space
+            possibly one with an alarm or the criminal(you will see green gas
+            when adjacent to the room with disorientating gas).
+          </li>
+          <li>
+            The criminal who will flee from you on sight. (you will smell cigar
+            smoke when adjacent to the room with the criminal).
+          </li>
+        </ol>
+      </li>
+      <li>
+        The criminal will not trip the alarm so they can be in the same room.
+      </li>
+      <li>
+        The criminal is not affected by the disorientating gas so they can be in
+        the same room.
+      </li>
+      <li>The alarm and disorientating gas will not be in the same room.</li>
+      <li>
+        There is only 1 room with an alarm and one room with disorientating gas
+      </li>
+      <li>
+        Guessing an incorrect room may cause the criminal to move to another
+        room.
+      </li>
+      <li>You have 5 guesses.</li>
+      <li>You may find an an extra guess in the warehouse.</li>
+      <li>An element of luck as always is involved.</li>
+    </ol>
+
+    <h3>Thoughts</h3>
+    <p>
+      The best approach to winning the game in my opinion is to first try and
+      find as many of the safe rooms as you can.
+      <br />
+      My partner Holmes though prefers to test himself and try to find the
+      criminal in as few moves as possible.
+    </p>
+
+    <script type="text/javascript">
+      var game = new Game();
+      game.init();
+    </script>
+  </body>
+</html>

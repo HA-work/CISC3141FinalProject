@@ -1,0 +1,294 @@
+.home {
+  background-image: url("images/scotlandYard.jpg");
+
+  color: white;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mG {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  height: 20%;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.loginPage {
+  background: rgb(123, 134, 232);
+  background: linear-gradient(
+    164deg,
+    rgb(141, 192, 22) 0%,
+    rgb(124, 12, 134) 52%,
+    rgb(117, 20, 101) 100%
+  );
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
+
+.statsPage {
+  background: rgb(42, 18, 146);
+  background: linear-gradient(
+    135deg,
+    rgba(123, 211, 232, 1) 0%,
+    rgb(224, 221, 29) 0%,
+    rgb(233, 113, 33) 100%
+  );
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
+
+.closedCasesPage {
+  background-color: #85ffbd;
+  background-image: linear-gradient(
+    45deg,
+    #056431 0%,
+    #86820a 50%,
+    #df1d1d 100%
+  );
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
+
+.aboutPage {
+  background: rgb(177, 111, 12);
+  background: linear-gradient(
+    164deg,
+    rgb(240, 169, 64) 0%,
+    rgb(231, 122, 49) 52%,
+    rgb(185, 175, 78) 100%
+  );
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
+
+.cluesPage {
+  background: rgb(9, 199, 224);
+  background: linear-gradient(
+    164deg,
+    rgb(42, 180, 24) 0%,
+    rgb(209, 149, 19) 52%,
+    rgb(190, 159, 18) 100%
+  );
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
+
+.signupPage {
+  background: rgb(104, 241, 99);
+  background: linear-gradient(
+    164deg,
+    rgb(211, 226, 74) 0%,
+    rgba(246, 140, 255, 1) 52%,
+    rgb(50, 207, 255) 100%
+  );
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
+
+.openCasesPage {
+  background: rgb(243, 162, 157);
+  background: linear-gradient(
+    164deg,
+    rgb(240, 237, 96) 0%,
+    rgb(143, 243, 168) 52%,
+    rgb(136, 233, 233) 100%
+  );
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
+
+.recipesPage {
+  background: rgb(236, 136, 223);
+  background: linear-gradient(
+    164deg,
+    rgba(123, 134, 232, 1) 0%,
+    rgb(255, 140, 159) 52%,
+    rgb(50, 231, 255) 100%
+  );
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
+
+#hunt {
+  background: rgb(219, 48, 48);
+  background: linear-gradient(
+    164deg,
+    rgb(163, 60, 60) 0%,
+    rgb(255, 140, 159) 52%,
+    rgb(50, 231, 255) 100%
+  );
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-size: cover;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.content {
+  padding: 16px;
+}
+
+/* Sticky navbar not working */
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#board {
+  background-color: #999;
+  height: 250px;
+  width: 250px;
+}
+#board td {
+  background-color: #ccc;
+}
+#feedback {
+  background-color: #ffff99;
+  border: 2px solid #ffcc99;
+  height: 100px;
+  width: 230px;
+  padding: 10px;
+  position: absolute;
+  top: 95px;
+  left: 280px;
+}
+
+#movementControls {
+  position: absolute;
+  top: 240px;
+  left: 300px;
+}
+
+#guessControls {
+  position: absolute;
+  top: 240px;
+  left: 475px;
+}
+
+#hunt {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}

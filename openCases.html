@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="text/javascript" href="stickyScript.js" />
+    <script type="text/javascript" src="newCaseScript.js"></script>
+    <script type="text/javascript" src="colorChangeScript.js"></script>
+    <title>Open Cases</title>
+
+    <style>
+      body {
+        margin: 0;
+        min-width: 250px;
+      }
+
+      /* Include the padding and border in an element's total width and height */
+      * {
+        box-sizing: border-box;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Style the list items */
+      ul li {
+        cursor: pointer;
+        position: relative;
+        padding: 12px 8px 12px 40px;
+        list-style-type: none;
+        background: #eee;
+        font-size: 18px;
+        transition: 0.2s;
+
+        /* make the list items unselectable */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Set all odd list items to a different color (zebra-stripes) */
+      ul li:nth-child(odd) {
+        background: #f9f9f9;
+      }
+
+      /* Darker background-color on hover */
+      ul li:hover {
+        background: #ddd;
+      }
+
+      /* When clicked on, add a background color and strike out text */
+      ul li.checked {
+        background: #888;
+        color: #fff;
+        text-decoration: line-through;
+      }
+
+      /* Add a "checked" mark when clicked on */
+      ul li.checked::before {
+        content: "";
+        position: absolute;
+        border-color: #fff;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        top: 10px;
+        left: 16px;
+        transform: rotate(45deg);
+        height: 15px;
+        width: 7px;
+      }
+
+      /* Style the close button */
+      .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px 16px 12px 16px;
+      }
+
+      .close:hover {
+        background-color: #f44336;
+        color: white;
+      }
+
+      /* Style the header */
+      .header {
+        background-color: #f44336;
+        padding: 30px 40px;
+        color: white;
+        text-align: center;
+      }
+
+      /* Clear floats after the header */
+      .header:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Style the input */
+      #myInput {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        width: 75%;
+        padding: 10px;
+        float: left;
+        font-size: 16px;
+      }
+
+      /* Style the "Add" button */
+      .addBtn {
+        padding: 10px;
+        width: 25%;
+        background: #d9d9d9;
+        color: #555;
+        float: left;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 0;
+      }
+
+      .addBtn:hover {
+        background-color: #bbb;
+      }
+    </style>
+  </head>
+  <body class="openCasesPage">
+    <div id="navbar" class="navbar">
+      <a href="index.html">Home</a>
+
+      <!-- List items populate ordered an unordered lists-->
+
+      <a href="about.html">About</a>
+
+      <a href="crimeStats.html">Crime Stats</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="closedCases.html">Closed Cases</a>
+
+      <a href="openCases.html">Open Cases</a>
+
+      <a href="recipes.html">Recipes</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="logIn.html">Log In</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="clues.html">Clues</a>
+
+      <a href="hunt.html">Hunt</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Change Color
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <button type="button" onclick="colorRed()">Red</button><br /><br />
+          <button type="button" onclick="colorMagenta()">Magenta</button
+          ><br /><br />
+          <button type="button" onclick="colorBlue()">Blue</button><br /><br />
+          <button type="button" onclick="colorBlack()">Black</button>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <ol id="itemList">
+      <li>
+        <a href="#greek">The Greek Interpreter</a>
+      </li>
+
+      <li>
+        <a href="#valley">The Valley of Fear</a>
+      </li>
+    </ol>
+
+    <h2 id="greek">The Greek Interpreter</h2>
+
+    <p>
+      Me and holmes are currently looking into an abduction case. A man came to
+      us claiming he was compensated handsomely for translating Greek in order
+      to communicate with a chained up masked man. While it sounds incredibly
+      odd we shall make every endeavor to get to the bottom of it.
+
+      <br />
+
+      <br />
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae proin sagittis nisl rhoncus mattis rhoncus. Amet nulla facilisi morbi tempus iaculis urna id. Egestas sed tempus urna et pharetra. Massa tincidunt dui ut ornare lectus sit. Varius morbi enim nunc faucibus. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Imperdiet massa tincidunt nunc pulvinar sapien et. Eu sem integer vitae justo eget magna fermentum iaculis. Sagittis purus sit amet volutpat consequat mauris nunc. Faucibus vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis. Dui id ornare arcu odio ut sem nulla. A erat nam at lectus urna duis convallis. Enim nulla aliquet porttitor lacus luctus accumsan. In metus vulputate eu scelerisque felis imperdiet proin. Quam elementum pulvinar etiam non quam lacus suspendisse. Lorem donec massa sapien faucibus et.
+
+        Leo a diam sollicitudin tempor id eu nisl nunc mi. In vitae turpis massa sed elementum tempus egestas sed. Viverra maecenas accumsan lacus vel facilisis. Venenatis urna cursus eget nunc. Vitae congue eu consequat ac felis. Justo nec ultrices dui sapien eget mi proin. Amet nulla facilisi morbi tempus iaculis urna id volutpat. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Habitasse platea dictumst vestibulum rhoncus est. Duis ut diam quam nulla porttitor massa id neque. Egestas diam in arcu cursus. Duis ultricies lacus sed turpis tincidunt.
+        
+        Malesuada proin libero nunc consequat. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Donec massa sapien faucibus et molestie. Tempus quam pellentesque nec nam aliquam sem et tortor consequat. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Aliquam etiam erat velit scelerisque in dictum non. Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Maecenas pharetra convallis posuere morbi leo urna molestie. Vitae nunc sed velit dignissim sodales ut eu sem integer. Purus in massa tempor nec. Habitasse platea dictumst quisque sagittis purus sit.</p>
+
+
+      <br />
+    </p>
+
+    <h2 id="valley">The Valley of Fear</h2>
+
+    <p>
+      Two murder cases 20 years apart. I cannot see any connection between them
+      but Holmes insists that the key to solving this new murder depends on an
+      old crime lodge that used to rule the valley.
+
+      <br />
+
+      <br />
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae proin sagittis nisl rhoncus mattis rhoncus. Amet nulla facilisi morbi tempus iaculis urna id. Egestas sed tempus urna et pharetra. Massa tincidunt dui ut ornare lectus sit. Varius morbi enim nunc faucibus. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Imperdiet massa tincidunt nunc pulvinar sapien et. Eu sem integer vitae justo eget magna fermentum iaculis. Sagittis purus sit amet volutpat consequat mauris nunc. Faucibus vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis. Dui id ornare arcu odio ut sem nulla. A erat nam at lectus urna duis convallis. Enim nulla aliquet porttitor lacus luctus accumsan. In metus vulputate eu scelerisque felis imperdiet proin. Quam elementum pulvinar etiam non quam lacus suspendisse. Lorem donec massa sapien faucibus et.
+
+        Leo a diam sollicitudin tempor id eu nisl nunc mi. In vitae turpis massa sed elementum tempus egestas sed. Viverra maecenas accumsan lacus vel facilisis. Venenatis urna cursus eget nunc. Vitae congue eu consequat ac felis. Justo nec ultrices dui sapien eget mi proin. Amet nulla facilisi morbi tempus iaculis urna id volutpat. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Habitasse platea dictumst vestibulum rhoncus est. Duis ut diam quam nulla porttitor massa id neque. Egestas diam in arcu cursus. Duis ultricies lacus sed turpis tincidunt.
+        
+        Malesuada proin libero nunc consequat. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Donec massa sapien faucibus et molestie. Tempus quam pellentesque nec nam aliquam sem et tortor consequat. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Aliquam etiam erat velit scelerisque in dictum non. Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Maecenas pharetra convallis posuere morbi leo urna molestie. Vitae nunc sed velit dignissim sodales ut eu sem integer. Purus in massa tempor nec. Habitasse platea dictumst quisque sagittis purus sit.</p>
+
+
+      <br />
+    </p>
+
+    <h2>Tentative Cases</h2>
+
+    <ul id="tentativeCases"></ul>
+
+    <h2>Add a new open case</h2>
+
+    <form id="newCaseForm" action="#" method="post">
+      <label for="caseName">Case Name:</label>
+      <input type="text" id="caseName" name="caseName" placeholder="name" />
+      <br />
+      <label for="caseDescription">Case Description:</label>
+      <input
+        type="text"
+        id="caseDescription"
+        name="caseDescription"
+        placeholder="description"
+      />
+      <br />
+      <input type="submit" value="Add case" />
+    </form>
+
+    <br />
+
+    <div id="myDIV" class="header">
+      <h2 style="margin: 5px">Possible Leads</h2>
+      <input type="text" id="myInput" placeholder="Name..." />
+      <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ul id="myUL">
+      <li>Butcher on 9th Avenue</li>
+      <li class="checked">Alexander Shaw</li>
+      <li>Professor Moriarty</li>
+      <li>The Greek Embassy</li>
+      <li>The Hunter's Lodge</li>
+      <li>Alice's Glassworks</li>
+    </ul>
+
+    <script>
+      // Create a "close" button and append it to each list item
+      var myNodelist = document.getElementsByTagName("LI");
+      var i;
+      for (i = 0; i < myNodelist.length; i++) {
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist[i].appendChild(span);
+      }
+
+      // Click on a close button to hide the current list item
+      var close = document.getElementsByClassName("close");
+      var i;
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+          var div = this.parentElement;
+          div.style.display = "none";
+        };
+      }
+
+      // Add a "checked" symbol when clicking on a list item
+      var list = document.getElementById("myUL");
+      list.addEventListener(
+        "click",
+        function (ev) {
+          if (ev.target.tagName === "LI") {
+            ev.target.classList.toggle("checked");
+          }
+        },
+        false
+      );
+
+      // Create a new list item when clicking on the "Add" button
+      function newElement() {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("myInput").value;
+        var t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === "") {
+          alert("You must write something!");
+        } else {
+          document.getElementById("myUL").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
+
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = "none";
+          };
+        }
+      }
+    </script>
+  </body>
+</html>

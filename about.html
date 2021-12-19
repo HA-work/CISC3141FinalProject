@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="text/javascript" href="stickyScript.js" />
+    <script type="text/javascript" src="colorChangeScript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About</title>
+    <style>
+      img {
+        width: 250px;
+        height: 250px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      .flip-box {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+      }
+
+      .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-box:hover .flip-box-inner {
+        transform: rotateX(180deg);
+      }
+
+      .flip-box-front,
+      .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .flip-box-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-box-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateX(180deg);
+      }
+    </style>
+  </head>
+
+  <body class="aboutPage">
+    <div id="navbar" class="navbar">
+      <a href="index.html">Home</a>
+
+      <!-- List items populate ordered an unordered lists-->
+
+      <a href="about.html">About</a>
+
+      <a href="crimeStats.html">Crime Stats</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="closedCases.html">Closed Cases</a>
+
+      <a href="openCases.html">Open Cases</a>
+
+      <a href="recipes.html">Recipes</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="logIn.html">Log In</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="clues.html">Clues</a>
+
+      <a href="hunt.html">Hunt</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Change Color
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <button type="button" onclick="colorRed()">Red</button><br /><br />
+          <button type="button" onclick="colorMagenta()">Magenta</button
+          ><br /><br />
+          <button type="button" onclick="colorBlue()">Blue</button><br /><br />
+          <button type="button" onclick="colorBlack()">Black</button>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <h2>Greetings</h2>
+        </div>
+        <div class="flip-box-back">
+          <h2>I hope you enjoy your visit</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p class="aboutText">
+        <!-- a p tag is a paragraph tag
+        it is used for grouping text together-->
+        Welcome to "Musings of the Doctor" the website that I created to share
+        the details of the various cases me and my partner Sherlock Holmes have
+        worked on or are currently working on.
+        <br />
+        Here I endeavor to share various news about our undertakings to stop the
+        criminal element as well as some more light hearted content.
+        <br />
+        On this website you will find an about page to inform you about me and
+        my partner.
+        <br />
+        A page on the various solved cases we have completed.
+        <br />
+        A page on the ongoing cases we are currently investigating. <br />
+        A page on recipes mostly curated by the marvelous Mrs. Hudson.<br />
+        A sign up page where you can enter in your information in order to stay
+        up to date with our intrepid adventures.
+        <br />
+        A log in page so you can sign in after you have signed up.
+        <br />
+        A contact page informing you of the best times and places to reach us if
+        you require our services.
+        <br />
+        Aclue page where concerned citizens who believe they have relevant info
+        regarding an ongoing case can submit evidence.
+        <b>Please </b>keep in mind that the the clues page is only for currently
+        <i>ongoing and open</i> cases.
+        <br />
+        And lastly a page that hosts a game that you can use to test and sharpen
+        your crime solving skills.
+      </p>
+
+      <address>
+        <p>221B Baker Street London</p>
+      </address>
+
+      <br />
+      <br />
+      <ol>
+        <li>
+          <a href="#doctor">Dr. John H. Watson</a>
+        </li>
+
+        <li>
+          <a href="#detective">Det. Sherlock Holmes</a>
+        </li>
+
+        <li>
+          <a href="#author">Arthur Conan Doyle</a>
+        </li>
+
+        <li>
+          <a href="#operation">Area of Operation</a>
+        </li>
+      </ol>
+
+      <h2 id="doctor">Dr. John Watson</h2>
+
+      <img src="images/watsonCane.jpg" />
+      <div class="watson"></div>
+
+      <p style="color: brown">
+        Former army doctor turned asset to the Constabulary of London Dr. Watson
+        is the liaison for Scotland Yard to the rather eccentric detective
+        Sherlock Holmes.
+      </p>
+
+      <table>
+        <tr>
+          <th scope="col">Address</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Available Times</th>
+        </tr>
+        <!--
+          Wonder if there is a way to store the table as a variable to keep resuing it
+          without having to copy the same code
+      -->
+
+        <tr>
+          <td>221B Baker Street</td>
+          <td>drwatson@scotyard.org</td>
+          <td>1-111-111-1111</td>
+          <td>10:00am~12:00pm Mon~Fri</td>
+        </tr>
+      </table>
+
+      <h2 id="detective">Det. Sherlock Holmes</h2>
+
+      <img src="images/sherlockHat.jpg" />
+      <div class="holmes"></div>
+
+      <p style="color: chartreuse">
+        Invaluable asset for the police and bane of the criminal underbelly of
+        London Detective Holmes while often enigmatic works are using his powers
+        of deduction to right wrongs.
+      </p>
+
+      <table>
+        <tr>
+          <th scope="col">Address</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Available Times</th>
+        </tr>
+        <!--
+          Wonder if there is a way to store the table as a variable to keep resuing it
+          without having to copy the same code
+      -->
+
+        <tr>
+          <td>221B Baker Street</td>
+          <td>Unavailable</td>
+          <td>Unavailable</td>
+          <td>Unavailable</td>
+        </tr>
+      </table>
+
+      <h2 id="author">Arthur Conan Doyle</h2>
+
+      <div class="doyle"></div>
+
+      <p style="color: orangered">
+        Mr. Doyle is a ghost writer who has been working with Dr. Watson to
+        better catalogue the various cases of Det. Holmes into books for the
+        enjoyment of many
+      </p>
+
+      <table>
+        <tr>
+          <th scope="col">Address</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Available Times</th>
+        </tr>
+        <!--
+          Wonder if there is a way to store the table as a variable to keep resuing it
+          without having to copy the same code
+      -->
+
+        <tr>
+          <td>243 Main Street</td>
+          <td>acd@gmail.com</td>
+          <td>2-222-222-2222</td>
+          <td>10:00am~12:00pm Mon~Fri</td>
+        </tr>
+      </table>
+
+      <h2 id="operation">Area of Operation</h2>
+
+      <p style="color: navy">
+        For the most part Det. Holmes and Dr. Watson serve the greater London
+        area but in the event of particularly important cases will venture
+        beyond the capital.
+      </p>
+
+      <iframe
+        width="450"
+        height="350"
+        src="https://maps.google.com/maps?q=london&t=&z=9&ie=UTF8&iwloc=&output=embed"
+      >
+      </iframe>
+    </div>
+
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>

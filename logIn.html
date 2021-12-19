@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="" href="stickyScript.js" />
+    <script type="text/javascript" src="colorChangeScript.js"></script>
+    <title>Log In</title>
+  </head>
+  <body class="loginPage">
+    <div id="navbar" class="navbar">
+      <a href="index.html">Home</a>
+
+      <!-- List items populate ordered an unordered lists-->
+
+      <a href="about.html">About</a>
+
+      <a href="crimeStats.html">Crime Stats</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="closedCases.html">Closed Cases</a>
+
+      <a href="openCases.html">Open Cases</a>
+
+      <a href="recipes.html">Recipes</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="logIn.html">Log In</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="clues.html">Clues</a>
+
+      <a href="hunt.html">Hunt</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Change Color
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <button type="button" onclick="colorRed()">Red</button><br /><br />
+          <button type="button" onclick="colorMagenta()">Magenta</button
+          ><br /><br />
+          <button type="button" onclick="colorBlue()">Blue</button><br /><br />
+          <button type="button" onclick="colorBlack()">Black</button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+
+    <script type="text/javascript" src="greetScript.js"></script>
+
+    <br />
+    <br />
+
+    <div>
+      <p id="test">
+        Don't have an account?
+        <br />
+        <a href="signUp.html">Sign Up</a>
+      </p>
+    </div>
+
+    <br />
+    <br />
+
+    <fieldset>
+      <form>
+        <label>
+          Username:
+          <input type="text" name="Username" maxlength="30" placeholder="" />
+        </label>
+
+        <br />
+        <br />
+
+        <label>
+          Password:
+          <input type="password" name="password" placeholder="" />
+        </label>
+        <br />
+        <br />
+        <input type="submit" name="logIn" value="Log In" />
+      </form>
+    </fieldset>
+  </body>
+</html>

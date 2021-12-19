@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="" href="stickyScript.js" />
+    <script type="text/javascript" src="colorChangeScript.js"></script>
+    <title>About</title>
+    <style>
+
+body {
+       
+        color: black;
+      }
+      img {
+        width: 250px;
+        height: 250px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      #myInput {
+        background-image: url("images/searchIcon.png");
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+
+      #myOL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #myOL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block;
+      }
+
+      #myOL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+
+      h2 {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body class="closedCasesPage">
+    <div id="navbar" class="navbar">
+      <a href="index.html">Home</a>
+
+      <!-- List items populate ordered an unordered lists-->
+
+      <a href="about.html">About</a>
+
+      <a href="crimeStats.html">Crime Stats</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="closedCases.html">Closed Cases</a>
+
+      <a href="openCases.html">Open Cases</a>
+
+      <a href="recipes.html">Recipes</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="logIn.html">Log In</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="clues.html">Clues</a>
+
+      <a href="hunt.html">Hunt</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Change Color
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <button type="button" onclick="colorRed()">Red</button><br /><br />
+          <button type="button" onclick="colorMagenta()">Magenta</button
+          ><br /><br />
+          <button type="button" onclick="colorBlue()">Blue</button><br /><br />
+          <button type="button" onclick="colorBlack()">Black</button>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <input
+      type="text"
+      id="myInput"
+      onkeyup="myFunction()"
+      placeholder="Search for cases.."
+      title="Type in a name"
+    />
+
+    <ol id="myOL">
+      <li>
+        <a href="#scarlet">A study in Scarlet</a>
+      </li>
+
+      <li>
+        <a href="#hound">Hound of the Baskervilles</a>
+      </li>
+
+      <li>
+        <a href="#devils">The Isle of Devils</a>
+      </li>
+    </ol>
+
+    <h2 id="scarlet">A study in Scarlet</h2>
+
+    <p style="color: red">
+      A study in Scarlet marks my first case with Det. Holmes. This adventure
+      includes my first confrontation with Holmes' signature brand of deduction.
+      <br />
+
+      <br />
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae proin sagittis nisl rhoncus mattis rhoncus. Amet nulla facilisi morbi tempus iaculis urna id. Egestas sed tempus urna et pharetra. Massa tincidunt dui ut ornare lectus sit. Varius morbi enim nunc faucibus. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Imperdiet massa tincidunt nunc pulvinar sapien et. Eu sem integer vitae justo eget magna fermentum iaculis. Sagittis purus sit amet volutpat consequat mauris nunc. Faucibus vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis. Dui id ornare arcu odio ut sem nulla. A erat nam at lectus urna duis convallis. Enim nulla aliquet porttitor lacus luctus accumsan. In metus vulputate eu scelerisque felis imperdiet proin. Quam elementum pulvinar etiam non quam lacus suspendisse. Lorem donec massa sapien faucibus et.
+
+        Leo a diam sollicitudin tempor id eu nisl nunc mi. In vitae turpis massa sed elementum tempus egestas sed. Viverra maecenas accumsan lacus vel facilisis. Venenatis urna cursus eget nunc. Vitae congue eu consequat ac felis. Justo nec ultrices dui sapien eget mi proin. Amet nulla facilisi morbi tempus iaculis urna id volutpat. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Habitasse platea dictumst vestibulum rhoncus est. Duis ut diam quam nulla porttitor massa id neque. Egestas diam in arcu cursus. Duis ultricies lacus sed turpis tincidunt.
+        
+        Malesuada proin libero nunc consequat. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Donec massa sapien faucibus et molestie. Tempus quam pellentesque nec nam aliquam sem et tortor consequat. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Aliquam etiam erat velit scelerisque in dictum non. Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Maecenas pharetra convallis posuere morbi leo urna molestie. Vitae nunc sed velit dignissim sodales ut eu sem integer. Purus in massa tempor nec. Habitasse platea dictumst quisque sagittis purus sit.</p>
+
+
+      <br />
+      Available
+      <a
+        href="https://www.amazon.com/Scarlet-Penguin-Sherlock-Holmes-Collection-ebook/dp/B005HDK55K"
+        >here</a
+      >
+      <br />
+    </p>
+
+    <h2 id="hound">Hound of the Baskervilles</h2>
+
+    <p style="color: fuchsia">
+      This is a tale of a hell hound roused whose thirst for blood knows no
+      bounds.<br />
+
+      <br />
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae proin sagittis nisl rhoncus mattis rhoncus. Amet nulla facilisi morbi tempus iaculis urna id. Egestas sed tempus urna et pharetra. Massa tincidunt dui ut ornare lectus sit. Varius morbi enim nunc faucibus. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Imperdiet massa tincidunt nunc pulvinar sapien et. Eu sem integer vitae justo eget magna fermentum iaculis. Sagittis purus sit amet volutpat consequat mauris nunc. Faucibus vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis. Dui id ornare arcu odio ut sem nulla. A erat nam at lectus urna duis convallis. Enim nulla aliquet porttitor lacus luctus accumsan. In metus vulputate eu scelerisque felis imperdiet proin. Quam elementum pulvinar etiam non quam lacus suspendisse. Lorem donec massa sapien faucibus et.
+
+        Leo a diam sollicitudin tempor id eu nisl nunc mi. In vitae turpis massa sed elementum tempus egestas sed. Viverra maecenas accumsan lacus vel facilisis. Venenatis urna cursus eget nunc. Vitae congue eu consequat ac felis. Justo nec ultrices dui sapien eget mi proin. Amet nulla facilisi morbi tempus iaculis urna id volutpat. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Habitasse platea dictumst vestibulum rhoncus est. Duis ut diam quam nulla porttitor massa id neque. Egestas diam in arcu cursus. Duis ultricies lacus sed turpis tincidunt.
+        
+        Malesuada proin libero nunc consequat. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Donec massa sapien faucibus et molestie. Tempus quam pellentesque nec nam aliquam sem et tortor consequat. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Aliquam etiam erat velit scelerisque in dictum non. Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Maecenas pharetra convallis posuere morbi leo urna molestie. Vitae nunc sed velit dignissim sodales ut eu sem integer. Purus in massa tempor nec. Habitasse platea dictumst quisque sagittis purus sit.</p>
+
+
+      <br />
+      Available
+      <a
+        href="https://www.amazon.com/Hound-Baskervilles-Wisehouse-Classics/dp/9176370666"
+        >here</a
+      >
+      <br />
+    </p>
+
+    <h2 id="devils">The Isle of Devils</h2>
+
+    <p style="color: indigo">
+      One of the rare times I happen upon a mystery without my partner Holmes to
+      help.<br />
+
+      <br />
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae proin sagittis nisl rhoncus mattis rhoncus. Amet nulla facilisi morbi tempus iaculis urna id. Egestas sed tempus urna et pharetra. Massa tincidunt dui ut ornare lectus sit. Varius morbi enim nunc faucibus. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Imperdiet massa tincidunt nunc pulvinar sapien et. Eu sem integer vitae justo eget magna fermentum iaculis. Sagittis purus sit amet volutpat consequat mauris nunc. Faucibus vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis. Dui id ornare arcu odio ut sem nulla. A erat nam at lectus urna duis convallis. Enim nulla aliquet porttitor lacus luctus accumsan. In metus vulputate eu scelerisque felis imperdiet proin. Quam elementum pulvinar etiam non quam lacus suspendisse. Lorem donec massa sapien faucibus et.
+
+        Leo a diam sollicitudin tempor id eu nisl nunc mi. In vitae turpis massa sed elementum tempus egestas sed. Viverra maecenas accumsan lacus vel facilisis. Venenatis urna cursus eget nunc. Vitae congue eu consequat ac felis. Justo nec ultrices dui sapien eget mi proin. Amet nulla facilisi morbi tempus iaculis urna id volutpat. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Habitasse platea dictumst vestibulum rhoncus est. Duis ut diam quam nulla porttitor massa id neque. Egestas diam in arcu cursus. Duis ultricies lacus sed turpis tincidunt.
+        
+        Malesuada proin libero nunc consequat. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Donec massa sapien faucibus et molestie. Tempus quam pellentesque nec nam aliquam sem et tortor consequat. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Aliquam etiam erat velit scelerisque in dictum non. Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Maecenas pharetra convallis posuere morbi leo urna molestie. Vitae nunc sed velit dignissim sodales ut eu sem integer. Purus in massa tempor nec. Habitasse platea dictumst quisque sagittis purus sit.</p>
+
+
+      <br />
+      Available
+      <a
+        href="https://www.amazon.com/Isle-Devils-Craig-Janacek-ebook/dp/B00AP5L73E"
+        >here</a
+      >
+      <br />
+    </p>
+    <script>
+      function myFunction() {
+        var input, filter, ol, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ol = document.getElementById("myOL");
+        li = ol.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crime Stats</title>
+
+    <link rel="" href="stickyScript.js" />
+    <script type="text/javascript" src="colorChangeScript.js"></script>
+
+    <script type="text/javascript" src="crimeScript.js"></script>
+  </head>
+  <body class="statsPage">
+    <div id="navbar" class="navbar">
+      <a href="index.html">Home</a>
+
+      <!-- List items populate ordered an unordered lists-->
+
+      <a href="about.html">About</a>
+
+      <a href="crimeStats.html">Crime Stats</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="closedCases.html">Closed Cases</a>
+
+      <a href="openCases.html">Open Cases</a>
+
+      <a href="recipes.html">Recipes</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="logIn.html">Log In</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <a href="clues.html">Clues</a>
+
+      <a href="hunt.html">Hunt</a>
+
+      <!-- am a tag is an anchor tag which is usually a link to another page-->
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          Change Color
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <button type="button" onclick="colorRed()">Red</button><br /><br />
+          <button type="button" onclick="colorMagenta()">Magenta</button
+          ><br /><br />
+          <button type="button" onclick="colorBlue()">Blue</button><br /><br />
+          <button type="button" onclick="colorBlack()">Black</button>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <h2>Crime Breakdown</h2>
+
+    <div id="piechart"></div>
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+
+    <script type="text/javascript">
+      // Load google charts
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Draw the chart and set the chart values
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Crime Type", "Times"],
+          ["Violent", 50],
+          ["Burglary", 32],
+          ["White Collar", 25],
+          ["Gang", 40],
+          ["Domestic", 17],
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = {
+          width: 550,
+          height: 400,
+          backgroundColor: { fill: "transparent" },
+          is3D: true,
+        };
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(
+          document.getElementById("piechart")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+
+    <p>
+      It is important to understand the dangers around you. On this page I have
+      decided to show information on the crime statistics that my allies in the
+      force have gathered.
+    </p>
+
+    <p>
+      You will find a list of crimes as categorized by the London Police as well
+      as their monthly averages.
+    </p>
+
+    <h1>Types of Crime from the official London Police API</h1>
+
+    <h2>Type of crime: Average number of incidents per month</h2>
+
+    <main></main>
+  </body>
+</html>
